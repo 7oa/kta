@@ -29,3 +29,39 @@ textarea{
   width: $w-header;
   margin: 0 auto;
 }
+.container-w{
+  max-width: $w-wide;
+  width: 100%;
+  margin: 0 auto;
+}
+.ttl-h2{
+  text-align: center;
+  color: $gray-20;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: bold;
+}
+.swiper-button-next,
+.swiper-button-prev{
+  position: absolute;
+  background-image: url('images/arr.png');
+  width: 8px;
+  height: 16px;
+  background-size: auto;
+}
+.swiper-button-next{
+  right: -38px;
+  background-position-x: -8px;
+  background-position-y: 0;
+  &:hover{
+    background-position-y: -16px;
+  }
+}
+.swiper-button-prev{
+  left: -38px;
+  background-position-x: 0;
+  background-position-y: 0;
+  &:hover{
+    background-position-y: -16px;
+  }
+}

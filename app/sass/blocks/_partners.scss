@@ -1,0 +1,29 @@
+.partners{
+  &__h{
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  &__txt{
+    font-size: 16px;
+    line-height: 28px;
+    color: $gray-76;
+    width: 740px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+  &__list{
+    position: relative;
+  }
+  &__slider{
+    overflow: hidden;
+  }
+  &__logo{
+    @include bg-img(auto);
+    display: block;
+    height: 65px;
+  }
+  &__next,
+  &__prev{
+    top: 70%;
+  }
+}

@@ -1,0 +1,22 @@
+.instagram{
+  &__h{
+    margin-bottom: 48px;
+  }
+  &__list{
+    position: relative;
+  }
+  &__gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+  &__img{
+    @include bg-img(cover);
+    width: 320px;
+    height: 230px;
+    margin: 0 5px 10px 5px;
+  }
+  &__slider{
+    overflow: hidden;
+  }
+}

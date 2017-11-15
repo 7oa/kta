@@ -1,26 +1,49 @@
 // js jquery
 $(document).ready(function() {
-	//popup
-	$('.js-open-callback').click( function(event){
-		event.preventDefault();
-		$('#callback__overlay').fadeIn(400,
-			function(){
-				$('#callback')
-					.css('display', 'block')
-					.animate({opacity: 1}, 200);
-				$('.callback-inner').animate({"margin-top": "30px"}, 200);
-			});
-		$("body").css('overflow-y','hidden');
-	});
-	$('#callback__close, #callback__overlay').click( function(){
-		$('#callback')
-			.animate({opacity: 0}, 200,
-				function(){
-					$(this).css('display', 'none');
-					$('#callback__overlay').fadeOut(400);
-				}
-			);
-		$('.callback-inner').animate({"margin-top": "0px"}, 200);
-		$("body").css('overflow-y','auto');
-	});
+    var swiper = new Swiper('.index-slider', {
+        preventClicks: false,
+        preventClicksPropagation: false,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        speed: 1500,
+        loop: true,
+        effect: "fade",
+        pagination: {
+            el: '.index-slider__pagination',
+            clickable: true,
+            bulletClass: 'index-slider__bullet',
+            bulletActiveClass: 'index-slider__bullet_active',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+        }
+    });
+
+    var swiper = new Swiper('.last-news__slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.last-news__next',
+            prevEl: '.last-news__prev'
+        }
+    });
+
+    var swiper = new Swiper('.partners__slider', {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.partners__next',
+            prevEl: '.partners__prev'
+        }
+    });
+    var swiper = new Swiper('.instagram__slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.instagram__next',
+            prevEl: '.instagram__prev'
+        }
+    });
 });

@@ -1,0 +1,61 @@
+.index-slider{
+  overflow: hidden;
+  position: relative;
+  &__pagination{
+    position: absolute;
+    bottom: 32px;
+    z-index: 9;
+    margin-left: 7px;
+  }
+  &__bullet{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    color: $green-8a;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+    &_active{
+      color: $gray-20;
+    }
+  }
+}
+.index-slide{
+  height: 541px;
+  @include bg-img(cover);
+  padding-top: 165px;
+  box-sizing: border-box;
+  position: relative;
+  &__content{
+    position: relative;
+  }
+  &__ttl{
+    color: $white;
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: bold;
+    margin-bottom: 22px;
+  }
+  &__prev{
+    color: $white;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    max-width: 530px;
+  }
+  &:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 48, 47, 0.3);
+  }
+}

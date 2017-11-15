@@ -14,11 +14,44 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 38px;
-  border-radius: 19px;
+  border-radius: 20px;
   padding: 0 20px;
   transition: .5s;
   &:hover{
     color: $white;
     background-color: $green-39;
+  }
+}
+.btn-grb{
+  border: 1px solid $gray-d0;
+  color: $green-39;
+  background-color: $white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 38px;
+  border-radius: 20px;
+  padding: 0 35px;
+  transition: .5s;
+  &:hover{
+    border-color: $green-39;
+  }
+}
+.link-btn{
+  display: inline-block;
+}
+.btn-green{
+  background-color: $green-39;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 14px;
+  color: $white;
+  width: 220px;
+  text-align: center;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: .5s;
+  &:hover{
+    background-color: $green-31;
   }
 }

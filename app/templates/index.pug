@@ -8,6 +8,126 @@ block title
 
 block content
 	.workarea
-		h1=activeMenu
+		.index-b1
+			.container-w
+				.index-slider
+					.swiper-wrapper
+						.swiper-slide
+							.index-slide(style="background-image: url('https://picsum.photos/1600?image=1061')")
+								.index-slide__content
+									.container
+										.index-slide__ttl КТА - Переработка отходов
+										.index-slide__prev.
+											в том числе лом черных и цветных металлов, иные опасные отходы,
+											вторичное сырье, а также драгоценные металлы
+										.index-slide__btn
+											a.link-btn.btn-green(href="#") О компании
+						//end .swiper-slide
+						.swiper-slide
+							.index-slide(style="background-image: url('https://picsum.photos/1600?image=1062')")
+								.index-slide__content
+									.container
+										.index-slide__ttl Текст 2
+										.index-slide__prev.
+											2 в том числе лом черных и цветных металлов, иные опасные отходы,
+											вторичное сырье, а также драгоценные металлы
+										.index-slide__btn
+											a.link-btn.btn-green(href="#") О компании
+						//end .swiper-slide
+						.swiper-slide
+							.index-slide(style="background-image: url('https://picsum.photos/1600?image=1063')")
+								.index-slide__content
+									.container
+										.index-slide__ttl Текст 3
+										.index-slide__prev.
+											3 в том числе лом черных и цветных металлов, иные опасные отходы,
+											вторичное сырье, а также драгоценные металлы
+										.index-slide__btn
+											a.link-btn.btn-green(href="#") О компании
+						//end .swiper-slide
+					//end .swiper-wrapper
+					.container
+						.index-slider__pagination
+				//end .index-slider
+			//end .container-w
+		//end .index-b1
+		.index-b2
+			.last-news
+				.container
+					.last-news__h
+						h2.ttl-h2 Последние новости
+					.last-news__list
+						.last-news__slider
+							.swiper-wrapper
+								- for (var i=0; i<2; i++)
+									.swiper-slide
+										a.last-news__item(href="#")
+											.last-news__img(style="background-image: url('/images/TEMP/img01.png')")
+											.last-news__ttl Северяне могут начать получать фиксированное вознаграждение за жизнь в суровых климатических условиях!
+											.last-news__date 10 октября 2017
+									.swiper-slide
+										a.last-news__item(href="#")
+											.last-news__img(style="background-image: url('/images/TEMP/img02.png')")
+											.last-news__ttl КТА и отдел экологии и природопользования призывают отказаться от автомобиля хотя бы на 1 день!
+											.last-news__date 22 октября 2017
+									.swiper-slide
+										a.last-news__item(href="#")
+											.last-news__img(style="background-image: url('/images/TEMP/img03.png')")
+											.last-news__ttl Совсем скоро жители Северодвинска смогут гулять по красивым и ровным пешеходным дорогам
+											.last-news__date 4 октября 2017
+
+						//end .last-news__slider
+						.swiper-button-next.last-news__next
+						.swiper-button-prev.last-news__prev
+					//end .last-news__list
+					.last-news__seeall
+						a.link-btn.btn-grb(href="#") Смотреть все
+			//end .last-news
+		//end .index-b2
+		.index-b3
+			.container-w
+				.fullimg-bnr(style="background-image:url('https://picsum.photos/1600?image=1050')")
+					.fullimg-bnr__content
+						.fullimg-bnr__ttl КТА успешно работает как на Российском, так и международном рынке
+						.fullimg-bnr__text Деятельностью КТА охвачена вся территория Арктической зоны Российской Федерации, в том числе Мурманская область, Ненецкий автономный округ, Чукотский автономный округ, Ямало - Ненецкий автономный округ, Республика Коми, Архангельская область, включая архипелаг Новая Земля, архипелаг Земля Франца - Иосифа
+						.fullimg-bnr__btn
+							a.link-btn.btn-green(href="#") Подробнее
+		//end .index-b3
+		.index-b4
+			.partners
+				.container
+					.partners__h
+						h2.ttl-h2 Наши партнеры
+					.partners__txt.
+						В соответствии с договорными обязательствами перед компаниями выполняется сбор и вывоз металлолома в местах его образования, а также рекультивация земель и утилизация металлолома
+					.partners__list
+						.partners__slider
+							.swiper-wrapper
+								- for (var i=0; i<2; i++)
+									- for (var j=1; j<=4; j++)
+										.swiper-slide
+											a.partners__logo(href="#" target="_blank" style="background-image:url(images/TEMP/logo"+j+".png)")
+						.swiper-button-next.partners__next
+						.swiper-button-prev.partners__prev
+					//end .partners__list
+			//end .partners
+		//end .index-b4
+		.index-b5
+			.instagram
+				.container
+					.instagram__h
+						h2.ttl-h2 Мы в Instagram
+					.instagram__list
+						.instagram__slider
+							.swiper-wrapper
+								- for (var j=0; j<3; j++)
+									.swiper-slide
+										.instagram__gallery
+											- for (var i=0; i<6; i++)
+												.instagram__img(style="background-image:url(https://unsplash.it/500/500?image=1"+i+")")
+						.swiper-button-next.instagram__next
+						.swiper-button-prev.instagram__prev
+					//end .instagram__list
+		//end .index-b5
 
 	//end workarea

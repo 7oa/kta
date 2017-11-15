@@ -1,8 +1,90 @@
 .footer{
   flex: 0 0 auto;
-  color: $black;
+  color: $gray-20;
   width: 100%;
-  height: 100px;
-  background: rosybrown;
-  font-family: "OpenSansLight";
+  height: 290px;
+  background: $white;
+  border-top: 1px solid $gray-e8;
+  &__line1{
+    height: 222px;
+    box-sizing: border-box;
+    padding-top: 33px;
+    display: flex;
+  }
+  &__col1{
+    flex: 0 0 auto;
+    width: 400px;
+  }
+  &__col2{
+    flex: 0 0 auto;
+    width: 339px;
+  }
+  &__col3{
+
+  }
+  &__bl{
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 22px;
+    a{
+      color: $blue-3e;
+      text-decoration: none;
+    }
+  }
+  &__ttl{
+    color: $gray-76;
+    margin-bottom: 4px;
+  }
+  &__txt{
+
+  }
+  &__logo{
+    display: block;
+    width: 203px;
+    height: 52px;
+    @include bg-img(contain);
+    margin-bottom: 19px;
+  }
+  &__prev{
+    width: 345px;
+    font-size: 12px;
+    line-height: 20px;
+    color: $gray-76;
+  }
+  &__ss{
+    display: flex;
+    align-items: center;
+    padding-top: 13px;
+    padding-left: 4px;
+  }
+  &__vk{
+    width: 25px;
+    height: 15px;
+    background-image: url(images/vk.png);
+    background-position-y: -15px;
+    margin-right: 27px;
+  }
+  &__inst{
+    width: 20px;
+    height: 20px;
+    background-position-y: -20px;
+    background-image: url(images/inst.png);
+  }
+  &__line2{
+    border-top: 1px solid $gray-e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+  }
+  &__copyright{
+    font-size: 12px;
+  }
+  &__f5{
+    width: 209px;
+    height: 43px;
+    background-image: url('images/f5.png');
+    background-repeat: no-repeat;
+    margin-right: 40px;
+  }
 }

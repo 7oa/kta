@@ -1,3 +1,14 @@
 header.header
-    .container
-        include ../blocks/_header-menu
+    .container-h
+        .header__line1
+            .header__ss
+                a.header__vk(href="#" target="_blank")
+                a.header__inst(href="#" target="_blank")
+            a.header__logo(href="/" style="background-image:url('images/logo.png')")
+            .header__btn
+                button.btn.btn-gb Связаться с нами
+        //end .header__line1
+        .header__line2
+            include ../blocks/_header-menu
+        //end .header__line2
+    //end .container-h

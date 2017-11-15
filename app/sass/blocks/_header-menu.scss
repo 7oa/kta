@@ -1,12 +1,14 @@
 .header-menu{
   display: flex;
+  justify-content: space-between;
   &__items{
-    margin-right: 10px;
   }
   &__links{
-    color: $white;
-    &_active{
-      color: red;
+    color: $green-32;
+    transition: .5s;
+    &_active,
+    &:hover{
+      color: $green-39;
     }
   }
 }

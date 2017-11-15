@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: 'Roboto';
 }
 .content {
   flex: 1 0 auto;
@@ -21,6 +22,10 @@ textarea{
   resize: vertical;
 }
 .container{
-  width: 1260px;
+  width: $w-container;
+  margin: 0 auto;
+}
+.container-h{
+  width: $w-header;
   margin: 0 auto;
 }

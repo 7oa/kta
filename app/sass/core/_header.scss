@@ -1,5 +1,48 @@
 .header {
-    background: $white;
-    height: 100px;
-    background: cadetblue;
+  background: $white;
+  height: 164px;
+  &__line1{
+    padding-top: 36px;
+    padding-bottom: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__ss{
+    display: flex;
+    align-items: center;
+    width: 190px;
+  }
+  &__inst{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('images/inst.png');
+    background-repeat: no-repeat;
+    &:hover{
+      background-position-y: -20px;
+    }
+  }
+  &__vk{
+    display: block;
+    width: 25px;
+    height: 15px;
+    background-image: url('images/vk.png');
+    background-repeat: no-repeat;
+    margin-right: 32px;
+    &:hover{
+      background-position-y: -15px;
+    }
+  }
+  &__logo{
+    @include bg-img(contain);
+    width: 203px;
+    height: 52px;
+  }
+  &__btn{
+
+  }
+  &__line2{
+
+  }
 }

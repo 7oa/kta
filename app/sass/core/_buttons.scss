@@ -1,0 +1,24 @@
+.btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+  }
+}
+.btn-gb{
+  border: 1px solid $green-39;
+  color: $green-39;
+  background-color: $white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 38px;
+  border-radius: 19px;
+  padding: 0 20px;
+  transition: .5s;
+  &:hover{
+    color: $white;
+    background-color: $green-39;
+  }
+}

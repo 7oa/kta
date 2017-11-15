@@ -2,6 +2,9 @@ html,
 body {
   height: 100%;
 }
+.workarea{
+  overflow: hidden;
+}
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -48,6 +51,9 @@ textarea{
   width: 8px;
   height: 16px;
   background-size: auto;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 }
 .swiper-button-next{
   right: -38px;

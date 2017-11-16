@@ -1,0 +1,38 @@
+.page{
+  &__header{
+    @include bg-img-before(cover);
+    padding-top: 194px;
+    padding-bottom: 174px;
+    text-align: center;
+    color: $white;
+  }
+  &__header-content{
+    position: relative;
+  }
+  &__h{
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+  &__prev{
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  &__clmns{
+    display: flex;
+    padding-top: 98px;
+    padding-bottom: 129px;
+    color: $gray-76;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  &__clmn{
+    flex: 0 0 auto;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

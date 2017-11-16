@@ -1,0 +1,41 @@
+.price-bl{
+  display: flex;
+  &__ttl{
+    flex: 0 0 auto;
+    width: 740px;
+    color: $gray-76;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  &__link{
+    flex: 0 0 auto;
+    width: 240px;
+    text-align: center;
+  }
+  &__a{
+    display: inline-block;
+    position: relative;
+    padding-left: 34px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    color: $green-39;
+    text-transform: uppercase;
+    margin-top: 14px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 24px;
+      height: 30px;
+      background-image: url('images/price.png');
+      background-repeat: no-repeat;
+    }
+    &:hover{
+      color: $gray-38;
+      &:before{
+        background-position-y: -30px;
+      }
+    }
+  }
+}

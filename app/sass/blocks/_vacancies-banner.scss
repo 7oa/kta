@@ -1,0 +1,21 @@
+.vacancies-banner{
+  padding-top: 69px;
+  padding-bottom: 45px;
+  color: $white;
+  @include bg-img-before(cover);
+  &__content{
+    position: relative;
+  }
+  &__ttl{
+    font-size: 36px;
+    color: $white;
+    margin-bottom: 22px;
+    font-weight: bold;
+  }
+  &__prev{
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    max-width: 760px;
+  }
+}

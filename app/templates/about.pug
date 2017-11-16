@@ -1,0 +1,114 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'О компании';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page.page-about
+			.container-w
+				.page__header(style="background-image:url('https://picsum.photos/1600/540?image=1050')")
+					.page__header-content
+						.page__h
+							h1=activeMenu
+						.page__prev.
+							Компания КТА была образована в 2002 году и является одной из крупнейших организаций в Архангельской области. Непосредственно осуществляет переработку отходов, в том числе лом черных и цветных металлов, иные опасные отходы, вторичное сырье, а также драгоценные металлы
+				//end .page__header
+				.container
+					.page__clmns
+						.page__clmn.
+							Осуществляет рекультивацию земель, общестроительные работы, включая работы по демонтажу конструкций различной сложности и объектов капитального строительства. КТА обладает собственной материально - технической базой, транспортом, необходимым оборудованием и специалистами. Успешно работает как на российском, так и международном рынке
+						.page__clmn.
+							Деятельностью КТА охвачена вся территория Арктической зоны Российской Федерации, в том
+							числе Мурманская область, Ненецкий автономный округ, Чукотский автономный округ, Ямало -
+							Ненецкий автономный округ, Республика Коми, Архангельская область, включая архипелаг Новая
+							Земля, архипелаг Земля Франца - Иосифа
+				//end .page__clmns
+				.about-b1
+					.about-b1__ttl
+						h2.ttl-h2 Спектр услуг
+					.services-bl
+						.services-bl__menu
+							.services-bl__tab.js-tab.active(data-id="s1") Приём лома
+							.services-bl__tab.js-tab(data-id="s2") Щебень/песок/кирпич
+							.services-bl__tab.js-tab(data-id="s3") Металлопрокат
+							.services-bl__tab.js-tab(data-id="s4") Утилизация автомобилей
+						//end .services-bl__menu
+						.services-bl__banner
+							.services-bl__tab-cnt.active#s1(style="background-image:url('https://picsum.photos/1600/540?image=1052')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Прием лома
+									.services-bl__tab-t.
+										Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно
+									.services-bl__tab-btn
+										a.link-btn.btn-green(href="#") Подробнее об услуге
+								//end .services-bl__tab-inner
+							.services-bl__tab-cnt#s2(style="background-image:url('https://picsum.photos/1600/540?image=1053')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Щебень/песок/кирпич
+									.services-bl__tab-t.
+										Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно
+									.services-bl__tab-btn
+										a.link-btn.btn-green(href="#") Подробнее об услуге
+								//end .services-bl__tab-inner
+							.services-bl__tab-cnt#s3(style="background-image:url('https://picsum.photos/1600/540?image=1054')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Металлопрокат
+									.services-bl__tab-t.
+										Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно
+									.services-bl__tab-btn
+										a.link-btn.btn-green(href="#") Подробнее об услуге
+								//end .services-bl__tab-inner
+							.services-bl__tab-cnt#s4(style="background-image:url('https://picsum.photos/1600/540?image=1055')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Утилизация автомобилей
+									.services-bl__tab-t.
+										Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно
+									.services-bl__tab-btn
+										a.link-btn.btn-green(href="#") Подробнее об услуге
+								//end .services-bl__tab-inner
+						//end .services-bl__banner
+					//end .services-bl
+					.container
+						.price-bl
+							.price-bl__ttl.
+								Группа компаний КТА выполняет работы по утилизации ВДВИ с последующим приобретением образовавшегося лома металлов, работы по благоустройству территорий, демонтажу жилых домов
+							.price-bl__link
+								a.price-bl__a(href="#" target="_blank") Прайс лист.pdf
+						//end .price-bl
+				//end .about-b1
+				.about-b2
+					.partners
+						.container
+							.partners__h
+								h2.ttl-h2 Наши партнеры
+							.partners__txt.
+								В соответствии с договорными обязательствами перед компаниями групп ЛУКОЙЛ и МРТС выполняет сбор и вывоз металлолома в местах его образования, а также рекультивацию земель; выполнена утилизация металлолома, образовавшегося в результате ликвидации загрязнений Арктики
+							.partners__list
+								.partners__slider
+									.swiper-wrapper
+										- for (var i=0; i<2; i++)
+											- for (var j=1; j<=4; j++)
+												.swiper-slide
+													a.partners__logo(href="#" target="_blank" style="background-image:url(images/TEMP/logo" + j + ".png)")
+								.swiper-button-next.partners__next
+								.swiper-button-prev.partners__prev
+							//end .partners__list
+					//end .partners
+				//end .about-b2
+				.about-b3
+					.vacancies-banner(style="background-image:url('https://picsum.photos/1600/540?image=1051')")
+						.container
+							.vacancies-banner__content
+								.vacancies-banner__ttl Вакансии
+								.vacancies-banner__prev.
+									Здесь можно найти список вакансий актуальных на данный момент. Мы постоянно следим за повышением качества и эффективности работы компании и рассматриваем новые кандидатуры
+								.vacancies-banner__btn
+									a.link-btn.btn-green(href="#") перейти в раздел
+				//end .about-b3
+
+		//end .page
+	//end workarea

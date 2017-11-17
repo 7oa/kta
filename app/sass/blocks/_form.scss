@@ -1,0 +1,56 @@
+.form{
+  font-family: 'Roboto';
+  padding: 50px 50px 0px;
+  width: 310px;
+  &__ttl{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $gray-20;
+    margin-bottom: 60px;
+  }
+  &__row{
+    margin-bottom: 50px;
+  }
+  &__hlp{
+    position: relative;
+    padding-top: 10px;
+  }
+  &__input,
+  &__textarea{
+    font-size: 14px;
+    width: 100%;
+    color: $gray-20;
+    border: none;
+    font-family: 'Roboto';
+  }
+  &__input{
+    height: 20px;
+    line-height: 21px;
+  }
+  &__textarea{
+    height: 100px;
+    resize: none;
+  }
+  &__placeholder{
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 16px;
+    color: $gray-76;
+    font-size: 16px;
+    transition: 0.2s ease all;
+    &.moveUp{
+      top: -6px;
+      font-size: 12px;
+    }
+  }
+  &__submit{
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+#connect-us{
+  padding-bottom: 0;
+}

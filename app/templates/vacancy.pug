@@ -1,0 +1,72 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Вакансии';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page
+			.container-w
+				.page__header(style="background-image:url('https://picsum.photos/1600/540?image=1060')")
+					.page__header-content
+						.page__h
+							h1=activeMenu
+						.page__prev.
+							Здесь можно найти список вакансий актуальных на данный момент. Мы постоянно следим за повышением качества и эффективности работы компании и рассматриваем новые кандидатуры
+				//end .page__header
+				.container
+					.vacancy
+						.vacancy__item
+							.vacancy__num 01
+								span /02
+							.vacancy__txt
+								.vacancy__ttl Водитель грузового автотранспорта
+								.vacancy__desc.
+									Требования
+									<ul>
+										<li>Водительские права (категория С)</li>
+										<li>Возраст до 40 лет</li>
+									</ul>
+									Личные качества
+									<ul>
+										<li>стрессоустойчивость;</li>
+										<li>внимательность;</li>
+										<li>работоспособность</li>
+									</ul>
+									Отправлять резюме на почту: <a href="mailto:info@ktagroup.ru">info@ktagroup.ru</a><br>
+									Обращаться по телефону: 8 (8184) 55 - 45 - 55
+
+							.vacancy__zp Зарплата по собеседованию
+						//end .vacancy__item
+						.vacancy__item
+							.vacancy__num 02
+								span /02
+							.vacancy__txt
+								.vacancy__ttl Cекретарь руководителя
+								.vacancy__desc.
+									Требования
+									<ul>
+										<li>Умение работать в системе 1-С</li>
+										<li>Умение работать с пакетом Microsoft Office</li>
+									</ul>
+
+									Личные качества
+									<ul>
+										<li>стрессоустойчивость;</li>
+										<li>коммуникабельность</li>
+										<li>внимательность;</li>
+									</ul>
+
+									Отправлять резюме на почту: <a href="mailto:info@ktagroup.ru">info@ktagroup.ru</a><br>
+									Обращаться по телефону: 8 (8184) 55 - 45 - 55
+
+							.vacancy__zp
+								span 25 000 P
+						//end .vacancy__item
+
+					//end .vacancy
+		//end .page
+	//end workarea

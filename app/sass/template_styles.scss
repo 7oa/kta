@@ -4,13 +4,12 @@
 @import "core/fonts";
 @import "core/grid";
 
-@import "plugins/datepicker.min";
 @import "plugins/swiper.min";
+@import "plugins/jquery.fancybox.min";
 
 @import "core/base";
 @import "core/header";
 @import "core/footer";
-@import "core/images";
 @import "core/buttons";
 
 @import "blocks/header-menu";
@@ -23,8 +22,8 @@
 @import "blocks/vacancies-banner";
 @import "blocks/services-bl";
 @import "blocks/price-bl";
+@import "blocks/form";
+@import "blocks/vacancy";
 
 @import "pages/index";
 @import "pages/about";
-
-@import "core/adaptive";

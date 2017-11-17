@@ -6,9 +6,31 @@ header.header
                 a.header__inst(href="#" target="_blank")
             a.header__logo(href="/" style="background-image:url('images/logo.png')")
             .header__btn
-                button.btn.btn-gb Связаться с нами
+                button.btn.btn-gb(data-fancybox data-src="#connect-us" href="javascript:;") Связаться с нами
         //end .header__line1
         .header__line2
             include ../blocks/_header-menu
         //end .header__line2
     //end .container-h
+    #connect-us(style="display: none;")
+        .form
+            .form__ttl Связаться с нами
+            form.form__form
+                .form__row
+                    .form__hlp
+                        input.form__input.js-movePh(type="text")
+                        span.form__placeholder Имя
+                .form__row
+                    .form__hlp
+                        input.form__input.js-movePh#phone(type="tel")
+                        span.form__placeholder Телефон
+                .form__row
+                    .form__hlp
+                        input.form__input.js-movePh(type="email")
+                        span.form__placeholder E-mail
+                .form__row
+                    .form__hlp
+                        textarea.form__textarea.js-movePh
+                        span.form__placeholder Комментарий
+                .form__row
+                    input.form__submit.btn-green(type="submit" value="Заказать звонок")

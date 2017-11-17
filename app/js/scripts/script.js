@@ -53,4 +53,13 @@ $(document).ready(function() {
         $(this).addClass('active').siblings().removeClass('active');
         $('#'+id).addClass('active').siblings().removeClass('active');
     });
+
+    //form
+    $('.js-movePh').on('focus', function() {
+        $(this).next('span').addClass('moveUp');
+    });
+    $('.js-movePh').on('focusout', function() {
+        if(!$(this).val()) $(this).next('span').removeClass('moveUp');
+    });
+    $("#phone").mask("+7(999)999-99-99", {placeholder: "+7(___)___-__-__" });
 });

@@ -1,0 +1,59 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Новости';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.container-w
+			.page.page-news-detail
+				.page-news-detail__h
+					.container
+						a.page-news-detail__back(href="#") новости
+						.page-news-detail__ttl
+							h1 Северяне могут начать получать вознаграждение за жизнь в суровых климатических условиях!
+						.page-news-detail__date 9 октября 2017
+				//end .page-news-detail__h
+				.detail
+					.container
+						.detail__content
+							.detail__pre 9 октября в Госдуме состоялось заседание экспертного совета по вопросам законодательного обеспечения развития районов
+
+							p  Северяне могут начать получать фиксированное вознаграждение за жизнь в суровых климатических условиях!
+							p 9 октября в Госдуме состоялось заседание экспертного совета по вопросам законодательного обеспечения развития районов Крайнего Севера, Дальнего Востока, а также территорий, входящих в Арктическую зону РФ
+							.detail__slider
+								.detail-slider
+									.swiper-wrapper
+										- for (var i=1; i<4; i++)
+											.swiper-slide
+												.detail-slider__item
+													.detail-slider__img(style="background-image:url('https://picsum.photos/1000/1000?image=64" + i + "')")
+													.detail-slider__ttl Андрей Карасов: «Вернем все преимущества жизни в приполярных регионах!»
+									.detail-slider__pagination
+									.swiper-button-next.detail-slider__next
+									.swiper-button-prev.detail-slider__prev
+
+							p  На совете была поднята проблема оттока населения. Проблема серьезная. На начало 1989 года на северных территориях и на Дальнем Востоке проживало 15 млн человек. На январь этого года осталось 13,4 млн чел. Особенно серьезны потери отдельных субъектов РФ. Чукотский автономный округ за 15 лет лишился около 70% населения, Магаданская область - 63%, Мурманская - 36%.
+							p На экспертном совете было сказано, что необходимо найти оптимальное решение, которое поможет остановить отток населения с северных территорий. Прежде всего, это касается социальных гарантий и компенсаций. До сих пор на Севере действует советская система господдержки. На данный момент нужна корректировка, новый механизм госгарантий, который отвечает принципу социальной справедливости
+
+							.detail__ss.
+								<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+								<script src="//yastatic.net/share2/share.js"></script>
+								<div class="ya-share2" data-bare data-services="vkontakte,twitter,facebook"></div>
+				//end .detail
+				.last-line
+					.container
+						.last-line__ttl Последние новости
+						.last-line__list
+							- for (var i=0; i<3; i++)
+								a.news-sm(href="news-detail.html")
+									.news-sm__img(style="background-image:url('https://picsum.photos/700/700?image=103" + i + "')")
+									.news-sm__cnt
+										.news-sm__ttl Компания КТА совместно с ИП Герасимчук П.А. ведут активные работы
+										.news-sm__date 6 октября 2017
+				//end .last-line
+		//end .page
+	//end workarea

@@ -20,7 +20,6 @@ $(document).ready(function() {
             }
         }
     });
-
     var swiper = new Swiper('.last-news__slider', {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -29,7 +28,6 @@ $(document).ready(function() {
             prevEl: '.last-news__prev'
         }
     });
-
     var swiper = new Swiper('.partners__slider', {
         slidesPerView: 4,
         spaceBetween: 0,
@@ -44,6 +42,21 @@ $(document).ready(function() {
         navigation: {
             nextEl: '.instagram__next',
             prevEl: '.instagram__prev'
+        }
+    });
+    var swiper = new Swiper('.detail-slider', {
+        navigation: {
+            nextEl: '.detail-slider__next',
+            prevEl: '.detail-slider__prev'
+        },
+        pagination: {
+            el: '.detail-slider__pagination',
+            clickable: true,
+            bulletClass: 'detail-slider__bullet',
+            bulletActiveClass: 'detail-slider__bullet_active',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
         }
     });
 

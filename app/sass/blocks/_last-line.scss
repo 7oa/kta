@@ -1,0 +1,14 @@
+.last-line{
+  &__ttl{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $gray-20;
+    margin-bottom: 35px;
+  }
+  &__list{
+    display: flex;
+    margin: 0 -8px;
+    overflow: hidden;
+  }
+}

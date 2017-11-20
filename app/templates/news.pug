@@ -1,0 +1,43 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Новости';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page.page-news
+			.container
+				.page-news__h
+					a.page-news__ttl.active(href="#")=activeMenu
+					a.page-news__ttl(href="#") СМИ о нас
+				//end .page-news__h
+				.page-news__list
+					.news-prev
+						a.news-big(href="news-detail.html" style="background-image:url('https://picsum.photos/700/700?image=1020')")
+							.news-big__cnt
+								.news-big__ttl Благоустройство территории МАУ "Парк культуры и отдыха"
+								.news-big__date 10 октября 2017
+						- for (var i=0; i<4; i++)
+							a.news-sm(href="news-detail.html")
+								.news-sm__img(style="background-image:url('https://picsum.photos/700/700?image=103" + i + "')")
+								.news-sm__cnt
+									.news-sm__ttl Компания КТА совместно с ИП Герасимчук П.А. ведут активные работы
+									.news-sm__date 6 октября 2017
+					//end .news-prev
+				//end .page-news__list
+				.page-news__pagination
+					.pagination
+						- for (var i=1; i<=6; i++)
+							if i==3
+								span.pagination__page.active=i
+							else if i==5
+								span.pagination__page ...
+							else
+								a.pagination__page(href="news.html")=i
+					//end .pagination
+				//end .page-news__pagination
+		//end .page
+	//end workarea

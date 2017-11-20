@@ -75,4 +75,12 @@ $(document).ready(function() {
         if(!$(this).val()) $(this).next('span').removeClass('moveUp');
     });
     $("#phone").mask("+7(999)999-99-99", {placeholder: "+7(___)___-__-__" });
+
+    //прокрутка до якоря
+    $("body").on('click', '[href*="#"]', function(e){
+        var fixed_offset = 100;
+        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+        e.preventDefault();
+    });
+
 });

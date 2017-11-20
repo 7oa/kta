@@ -5,6 +5,9 @@
   height: 290px;
   background: $white;
   border-top: 1px solid $gray-e8;
+  &.noborder{
+    border-top: none;
+  }
   &__line1{
     height: 222px;
     box-sizing: border-box;

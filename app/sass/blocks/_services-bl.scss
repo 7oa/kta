@@ -42,4 +42,26 @@
     line-height: 28px;
     margin-bottom: 36px;
   }
+  &__price{
+    margin-bottom: 90px;
+    margin-top: 42px;
+    text-align: center;
+  }
+  &__txt{
+    padding: 50px 100px 22px;
+    color: $gray-76;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    p{
+      margin-bottom: 28px;
+    }
+    h3{
+      font-size: 26px;
+      line-height: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $gray-20;
+    }
+  }
 }

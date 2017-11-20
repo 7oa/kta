@@ -1,0 +1,45 @@
+.page-resp{
+
+}
+.resp-banner{
+  @include bg-img-before(cover);
+  padding-top: 146px;
+  padding-bottom: 130px;
+  margin-bottom: 60px;
+  &__inner{
+    color: $white;
+    position: relative;
+    max-width: 770px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__ttl{
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 20px;
+  }
+  &__txt{
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+.resp-txt{
+  width: 780px;
+  margin: 0 auto;
+  color: $gray-76;
+  font-size: 16px;
+  line-height: 28px;
+  p{
+    margin-bottom: 30px;
+  }
+  b{
+    font-weight: bold;
+    color: $gray-20;
+  }
+  blockquote{
+    font-weight: bold;
+    color: $gray-20;
+    font-size: 24px;
+    line-height: 38px;
+  }
+}

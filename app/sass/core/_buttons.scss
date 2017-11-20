@@ -39,6 +39,9 @@
 }
 .link-btn{
   display: inline-block;
+  &:focus{
+    outline: none;
+  }
 }
 .btn-green{
   background-color: $green-39;

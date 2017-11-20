@@ -1,0 +1,108 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Услуги';
+	- var noBorder = true;
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page.page-services
+			.container-w
+				.services-b1
+					.services-b1__ttl
+						h1 Наши услуги
+					.services-bl
+						.services-bl__menu
+							a.services-bl__tab.active(href="#s1") Приём лома
+							a.services-bl__tab(href="#s2") Щебень/песок/кирпич
+							a.services-bl__tab(href="#s3") Металлопрокат
+							a.services-bl__tab(href="#s4") Утилизация автомобилей
+						//end .services-bl__menu
+						.services-bl__price
+							a.price-bl__a(href="#" target="_blank") Прайс лист.pdf
+						//end .services-bl__price
+
+						.services-bl__banner.services-item#s1
+							.services-bl__tab-cnt.active(style="background-image:url('https://picsum.photos/1600/540?image=1052')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Прием лома
+									.services-bl__tab-t.
+										Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно
+									.services-bl__tab-btn
+										a.link-btn.btn-green(data-fancybox data-src="#connect-us" href="javascript:;") Подать заявку
+								//end .services-bl__tab-inner
+							.container
+								.services-bl__txt
+									p Сдавать металлолом в КТА – выгодно!
+									p Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно.
+									p Производим сортировку медной группы по всем видам лома, используя специальные анализаторы.
+									p Демонтаж металлоконструкций любой сложности и толщины. Сдавая металлолом, вы сохраняете невосполнимые ресурсы, бесценные залежи природных ископаемых для наших потомков!
+
+								.we-accept
+									.we-accept__h Мы принимаем
+									.we-accept__list
+										- var list = [{id: 1, ttl: "Медь"}, {id: 2, ttl: "Аллюминий"}, {id: 3, ttl: "Латунь"}, {id: 4, ttl: "Свинец"}, {id: 5, ttl: "Кабели"}, {id: 6, ttl: "Аккумуляторы"}, {id: 7, ttl: "Нержавейка"}, {id: 8, ttl: "Сталь"}, {id: 9, ttl: "Драгоценные металлы"}, {id: 0, ttl: "Электронный лом"}]
+											each item in list
+												.we-accept__item
+													.we-accept__img(style="background-image:url('https://picsum.photos/200/100?image=1"+ item.id +"')")
+													.we-accept__ttl=item.ttl
+						//end .services-bl__banner
+
+						.services-bl__banner.services-item#s2
+							.services-bl__tab-cnt.active(style="background-image:url('https://picsum.photos/1600/540?image=1053')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Щебень. Песок. Кирпич
+									.services-bl__tab-t.
+										Компания КТА принимает все виды лома черных и цветных металлов. Вывоз от 5 тонн – бесплатно
+									.services-bl__tab-btn
+										a.link-btn.btn-green(data-fancybox data-src="#connect-us" href="javascript:;") Подать заявку
+								//end .services-bl__tab-inner
+							.container
+								.services-bl__txt
+									h3 Щебень /Песок
+									p.
+										Песок – самый популярный строительный материал, использующийся в 21
+										веке. Он необходим на всех этапах ведения строительных работ.
+										Щебень/песок все фракции. Доставка, погрузка. Паспорт качества. Протокол
+										лабораторных испытаний.
+									br
+									br
+									h3 Кирпич
+									p.
+										Хотите надежный и крепкий дом? Тогда вам в КТА! <br>
+										Печной кирпич М 150 и М 200<br>
+										Производство: Чайковский кирпичный завод<br>
+						//end .services-bl__banner
+
+						.services-bl__banner.services-item#s3
+							.services-bl__tab-cnt.active(style="background-image:url('https://picsum.photos/1600/540?image=1054')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Металлопрокат
+									.services-bl__tab-t.
+										Широкий ассортимент металлопроката.<br>
+										Доставка и погрузка
+									.services-bl__tab-btn
+										a.link-btn.btn-green(data-fancybox data-src="#connect-us" href="javascript:;") Подать заявку
+								//end .services-bl__tab-inner
+						//end .services-bl__banner
+
+						.services-bl__banner.services-item#s4
+							.services-bl__tab-cnt.active(style="background-image:url('https://picsum.photos/1600/540?image=1055')")
+								.services-bl__tab-inner
+									.services-bl__tab-h Утилизация автомобилей
+									.services-bl__tab-t.
+										Производим утилизацию автотранспортных средств в рамках<br>
+										государственных программ
+									.services-bl__tab-btn
+										a.link-btn.btn-green(data-fancybox data-src="#connect-us" href="javascript:;") Подать заявку
+								//end .services-bl__tab-inner
+						//end .services-bl__banner
+
+					//end .services-bl
+				//end .services-b1
+
+		//end .page
+	//end workarea

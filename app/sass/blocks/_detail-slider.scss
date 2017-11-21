@@ -4,6 +4,11 @@
   &__item{
     border-bottom: 1px solid $gray-e8;
   }
+  &.noborder{
+    .detail-slider__item{
+      border-bottom: none;
+    }
+  }
   &__img{
     @include bg-img(cover);
     height: 600px;

@@ -1,10 +1,10 @@
 .page-resp{
-
+  padding-bottom: 43px;
 }
 .resp-banner{
   @include bg-img-before(cover);
-  padding-top: 146px;
-  padding-bottom: 130px;
+  padding-top: 142px;
+  padding-bottom: 126px;
   margin-bottom: 60px;
   &__inner{
     color: $white;
@@ -17,11 +17,16 @@
     font-size: 36px;
     line-height: 48px;
     margin-bottom: 20px;
+    font-weight: bold;
   }
   &__txt{
     font-size: 16px;
     line-height: 28px;
   }
+}
+.resp-slider{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .resp-txt{
   width: 780px;
@@ -41,5 +46,17 @@
     color: $gray-20;
     font-size: 24px;
     line-height: 38px;
+    padding-top: 62px;
+  }
+  strong{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $gray-20;
+  }
+  cite{
+    font-size: 16px;
+    line-height: 38px;
+    color: $gray-20;
   }
 }

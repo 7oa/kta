@@ -1,0 +1,24 @@
+.quote{
+  margin-bottom: 118px;
+  &__txt{
+    margin-bottom: 26px;
+  }
+  &__autor{
+    display: flex;
+    align-items: center;
+  }
+  &__autor{
+
+  }
+  &__img{
+    @include bg-img(cover);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex: 0 0 auto;
+  }
+  &__name{
+
+  }
+}

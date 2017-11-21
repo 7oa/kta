@@ -1,0 +1,19 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Информация не найдена';
+    - var noBorder = true;
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-404
+            .page-404__img
+                img(src="images/404.png" alt="Error 404")
+            .page-404__txt Извините, запрашиваемая вами страница не найдена. Попробуйте обновить страницу или перейдите на главную
+            .page-404__btn
+                a.link-btn.btn-green(href="/") на главную
+        //end .page
+    //end workarea

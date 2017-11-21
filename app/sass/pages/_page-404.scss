@@ -1,0 +1,15 @@
+.page-404{
+  padding-top: 86px;
+  padding-bottom: 89px;
+  text-align: center;
+  &__img{
+    margin-bottom: 37px;
+  }
+  &__txt{
+    max-width: 590px;
+    margin: 0 auto 50px;
+    font-size: 16px;
+    line-height: 28px;
+    color: $gray-20;
+  }
+}

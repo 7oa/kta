@@ -1,11 +1,17 @@
 .price-bl{
   display: flex;
-  &__ttl{
+  &__ttllist{
     flex: 0 0 auto;
     width: 740px;
+  }
+  &__ttl{
     color: $gray-76;
     font-size: 16px;
     line-height: 28px;
+    display: none;
+    &.active{
+      display: block;
+    }
   }
   &__link{
     flex: 0 0 auto;

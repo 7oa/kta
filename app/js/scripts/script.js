@@ -64,7 +64,7 @@ $(document).ready(function() {
     $('.js-tab').click(function () {
         var id = $(this).data('id');
         $(this).addClass('active').siblings().removeClass('active');
-        $('#'+id).addClass('active').siblings().removeClass('active');
+        $('.'+id).addClass('active').siblings().removeClass('active');
     });
 
     //form

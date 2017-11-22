@@ -1,0 +1,42 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Контакты';
+	- var noBorder = true;
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page.page-contacts
+			.container
+				.page-contacts__h
+					h1=activeMenu
+			.yandex-map-wrapper
+				#map
+				.container
+					.map-label
+						.map-label__bl
+							.map-label__ttl Адрес
+							.map-label__txt г. Северодвинск, Грузовой проезд 25
+							a.map-label__link(href="#") Адреса наших объектов
+
+						.map-label__bl
+							.map-label__ttl Телефон
+							.map-label__txt.
+								8 (800) 222-21-21<br>
+								8 (8184) 55-45-55
+
+						.map-label__bl
+							.map-label__ttl Почта
+							.map-label__txt info@ktagroup.ru
+
+						.map-label__btn
+							a.link-btn.btn-green(data-fancybox data-src="#connect-us" href="javascript:;") Заказать услугу
+				//map script
+				include blocks/_map
+				//end map script
+			//end .yandex-map-wrapper
+		//end .page
+	//end workarea

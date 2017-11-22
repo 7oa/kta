@@ -17,6 +17,7 @@ var gulp = require("gulp"),
     cache = require('gulp-cache'),
     browserSync = require('browser-sync');
 
+var reload = browserSync.reload;
 var dest_path = 'public';
 var app_path = 'app';
 
@@ -115,26 +116,26 @@ gulp.task('clearcache', function () {
 // Слежка
 
 gulp.task('watch', function() {
-    watch(['./app/images/**/*.*'], function(event, cb) {
-        gulp.start('image');
-    });
-    watch(['./app/templates/**/*.pug'], function(event, cb) {
-        gulp.start('pug');
-    });
-    watch(['./app/sass/**/*.scss'], function(event, cb) {
-        gulp.start('sass');
-    });
-    watch(['./app/js/**/*.js'], function(event, cb) {
-        gulp.start('js');
-    });
-    watch(['./app/sass/fonts/**/*.*'], function(event, cb) {
-        gulp.start('fonts');
-    });
-    // gulp.watch(['], ['pug']);
-    // gulp.watch(['./app/sass/**/*.scss'], ['sass']);
-    // gulp.watch(['./app/js/**/*.js'], ['js']);
-    // gulp.watch(['./app/images/**/*.*'], ['image']);
-    // gulp.watch(['./app/sass/fonts/**/*.*'], ['fonts']);
+    // watch(['./app/images/**/*.*'], function(event, cb) {
+    //     gulp.start('image');
+    // });
+    // watch(['./app/templates/**/*.pug'], function(event, cb) {
+    //     gulp.start('pug');
+    // });
+    // watch(['./app/sass/**/*.scss'], function(event, cb) {
+    //     gulp.start('sass');
+    // });
+    // watch(['./app/js/**/*.js'], function(event, cb) {
+    //     gulp.start('js');
+    // });
+    // watch(['./app/sass/fonts/**/*.*'], function(event, cb) {
+    //     gulp.start('fonts');
+    // });
+    gulp.watch(['./app/templates/**/*.pug'], ['pug']);
+    gulp.watch(['./app/sass/**/*.scss'], ['sass']);
+    gulp.watch(['./app/js/**/*.js'], ['js']);
+    //gulp.watch(['./app/images/**/*.*'], ['image']);
+    //gulp.watch(['./app/sass/fonts/**/*.*'], ['fonts']);
 });
 
 // Запуск сервера c лайврелоадом
@@ -156,14 +157,11 @@ gulp.task('serv_no_livereload', function() {
     opn('http://localhost:8888');
 });
 
-browserSync.create();
-var reload = browserSync.reload;
-//  Запуск browserSync, и слежения за изменениями в файлах
 gulp.task('server', function () {
     browserSync.init({
-        server: dest_path, //Рабоччая директория
-        browser: 'chrome', //Запуск браузера Google Chrome
-        notify: false //Не отображать уведомления browserSync в браузере
+        server: dest_path,
+        browser: 'chrome',
+        notify: false
     });
 });
 

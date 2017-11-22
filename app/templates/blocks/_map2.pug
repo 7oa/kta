@@ -1,0 +1,61 @@
+script(src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU")
+script.
+    ymaps.ready(init);
+    function init() {
+        var groups = [
+            {
+                center: [64.55898183637967,39.86229936767573],
+                name: "проезд Грузовой, 25",
+                city: "г. Северодвинск"
+            },
+            {
+                center: [64.51957355739123,40.68916399999999],
+                name: "ул. Дачная, 64/1",
+                city: "г. Архангельск"
+            },
+            {
+                center: [64.56858905728994,40.522194],
+                name: "пр. Никольский, 2/5",
+                city: "г. Архангельск"
+            }
+        ];
+        // Создание экземпляра карты.
+        var myMap = new ymaps.Map('map', {
+                center: [64.54474399237616,40.53689086012528],
+                zoom: 12
+            })
+
+        var collection = new ymaps.GeoObjectCollection();
+        myMap.geoObjects.add(collection);
+
+        // Перебираем все группы.
+        for (var i = 0, l = groups.length; i < l; i++) {
+            var placemark = new ymaps.Placemark(
+                groups[i].center,
+                {
+                    balloonContent: groups[i].name
+                },
+                {
+                    iconImageHref: 'images/balloon.png',
+                    iconImageSize: [50, 69],
+                    iconImageOffset: [-25, -60]
+                }
+            );
+            collection.add(placemark);
+
+            var menu = $('<div class="map-objects__item"><div class="map-objects__addr">'+groups[i].name+'</div><div class="map-objects__city">'+groups[i].city+'</div></div>');
+            menu
+                .appendTo(".map-objects__list")
+        }
+
+        myMap.setBounds(myMap.geoObjects.getBounds());
+    }
+    $(document).on("click", ".map-objects__item", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        myMap.panTo([64.55898183637967,39.86229936767573]);
+    });
+
+    $(".js-show-obj").click(function () {
+        $(this).toggleClass("close");
+        $(this).next().slideToggle();
+    });

@@ -1,0 +1,29 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Филиалы';
+	- var noBorder = true;
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page.page-contacts
+			.container
+				.page-contacts__h
+					h1 Филиальная сеть
+			.yandex-map-wrapper
+				#map
+				.container
+					.map-objects
+						.map-objects__ttl.js-show-obj Адреса наших объектов
+						.map-objects__list
+
+
+				//map script
+				include blocks/_map4
+				//end map script
+			//end .yandex-map-wrapper
+		//end .page
+	//end workarea

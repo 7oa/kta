@@ -1,0 +1,116 @@
+script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+script.
+    ymaps.ready(init);
+    var groups = [
+        {
+            center: [64.56009855730052,39.86882249999995],
+            name: "проезд Грузовой, 25",
+            city: "г. Северодвинск",
+            time: "09:00 - 18:00",
+            tel: "+7 (921) 111 02 33",
+            email: "kta@ktagroup.ru",
+            idd: "1"
+        },
+        {
+            center: [64.51957355739123,40.68916399999999],
+            name: "ул. Дачная, 64/1",
+            city: "г. Архангельск",
+            time: "09:00 - 18:00",
+            tel: "+7 (921) 222 02 33",
+            email: "kta@ktagroup.ru",
+            idd: "2"
+        },
+        {
+            center: [64.56858905728994,40.522194],
+            name: "пр. Никольский, 2/5",
+            city: "г. Архангельск",
+            time: "09:00 - 18:00",
+            tel: "+7 (921) 333 02 33",
+            email: "kta@ktagroup.ru",
+            idd: "3"
+        },
+        {
+            center: [64.51573455738136,40.56535800000001],
+            name: "ул. Дежневцев, 37",
+            city: "г. Архангельск",
+            time: "09:00 - 18:00",
+            tel: "+7 (921) 444 02 33",
+            email: "kta@ktagroup.ru",
+            idd: "4"
+        },
+        {
+            center: [64.55517605732041,40.5777369999999],
+            name: "Окружное шоссе, 16",
+            city: "г. Архангельск",
+            time: "09:00 - 18:00",
+            tel: "+7 (921) 243 02 33",
+            email: "kta@ktagroup.ru",
+            idd: "5"
+        },
+        {
+            center: [64.53727405733929,40.600015],
+            name: "ул. Октябрят, 33",
+            city: "г. Архангельск, Майская горка",
+            time: "09:00 - 18:00",
+            tel: "+7 (921) 243 02 33",
+            email: "kta@ktagroup.ru",
+            idd: "6"
+        }
+    ];
+    function init() {
+
+        // Создание экземпляра карты.
+        var myMap = new ymaps.Map('map', {
+            center: [64.54474399237616, 40.53689086012528],
+            zoom: 12,
+            controls: []
+        })
+
+        var collection = new ymaps.GeoObjectCollection();
+        myMap.geoObjects.add(collection);
+
+
+        // Перебираем все группы.
+        for (var i = 0, l = groups.length; i < l; i++) {
+            createSubMenu(groups[i]);
+        }
+        function createSubMenu(item){
+            var baloonContent = '<div class="baloon">';
+            baloonContent += '<div class="baloon__ttl">'+item.name+'</div>';
+            baloonContent += '<div class="baloon__time">'+item.time+'</div>';
+            baloonContent += '<div class="baloon__tel">'+item.tel+'</div>';
+            baloonContent += '<div class="baloon__email">'+item.email+'</div>';
+            baloonContent += '</div>';
+            var placemark = new ymaps.Placemark(
+                item.center,
+                {
+                    balloonContent: baloonContent
+                },
+                {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'images/balloon.png',
+                    iconImageSize: [50, 69],
+                    iconImageOffset: [-25, -60]
+                }
+            );
+            collection.add(placemark);
+
+            var menu = $('<div class="map-objects__item"><div class="map-objects__addr">' + item.name + '</div><div class="map-objects__city">' + item.city + '</div></div>');
+            menu
+                .appendTo(".map-objects__list")
+                .click(function () {
+                    myMap.setCenter(item.center);
+                    placemark.balloon.open();
+                    $(this).addClass('active').siblings().removeClass("active");
+                    return false;
+                });
+        }
+
+        myMap.setBounds(myMap.geoObjects.getBounds());
+
+    }
+
+    $(".js-show-obj").click(function () {
+        $(this).toggleClass("close");
+        $(this).next().slideToggle();
+    });

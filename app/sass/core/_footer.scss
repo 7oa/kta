@@ -22,9 +22,6 @@
     flex: 0 0 auto;
     width: 339px;
   }
-  &__col3{
-
-  }
   &__bl{
     margin-bottom: 32px;
     font-size: 14px;
@@ -66,12 +63,14 @@
     background-image: url(images/vk.png);
     background-position-y: -15px;
     margin-right: 27px;
+    display: block;
   }
   &__inst{
     width: 20px;
     height: 20px;
     background-position-y: -20px;
     background-image: url(images/inst.png);
+    display: block;
   }
   &__line2{
     border-top: 1px solid $gray-e8;
